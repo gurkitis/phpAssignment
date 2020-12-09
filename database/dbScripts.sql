@@ -1,4 +1,3 @@
---create Items table
 create table Items(
 	SKU varchar(255) UNIQUE,
 	Product_Name varchar(255),

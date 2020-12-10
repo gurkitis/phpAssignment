@@ -7,10 +7,10 @@
         <header>
             <h1>Product List</h1>
             <button type="button">
-                <a href="/ItemController/create">ADD</a>
+                <a href="/AddController/create">ADD</a>
             </button>
             <button type="button">
-                <a href="/ItemController/massDelete">MASS DELETE</a>
+                <a href="/ListController/massDelete">MASS DELETE</a>
             </button>
         </header>
         <div class="catalog">

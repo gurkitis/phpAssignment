@@ -2,7 +2,7 @@
 
 class App 
 {
-    protected $controller = 'ItemController';
+    protected $controller = 'ListController';
     protected $method = 'index';
     protected $params = [];
 

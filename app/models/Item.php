@@ -22,4 +22,11 @@ class Item extends Database
         }
         return $result;
     }
+
+    public function existsSku($sku)
+    {
+        $result = $this->connect()->prepare("SELECT COUNT(*) FROM items WHERE SKU = ?");
+        $result->execute([$sku]);
+        return (bool)$result->fetch()['COUNT(*)'];
+    }
 }

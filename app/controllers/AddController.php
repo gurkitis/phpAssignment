@@ -9,23 +9,32 @@ class AddController extends Controller
 
     public function saveDVD()
     {
-        echo 'ok';
+        $item = $this->model('Item');
+        $attribute = $_POST['size']."MB";
+        $item->insertItem($_POST['sku'], $_POST['name'], $_POST['price'], $_POST['type'], $attribute);
+        header("Location: /");
     }
 
     public function saveBook()
     {
-
+        $item = $this->model('Item');
+        $attribute = $_POST['weight']."KG";
+        $item->insertItem($_POST['sku'], $_POST['name'], $_POST['price'], $_POST['type'], $attribute);
+        header("Location: /");
     }
 
     public function saveFurniture()
     {
-
+        $item = $this->model('Item');
+        $attribute = $_POST['height'].'x'.$_POST['width'].'x'.$_POST['length'];
+        $item->insertItem($_POST['sku'], $_POST['name'], $_POST['price'], $_POST['type'], $attribute);
+        header("Location: /");
     }
 
     public function validateDVD()
     {
         $values = array('sku' => null, 'name' => null, 'price' => null, 'type' => null, 'size' => null);
-        $errors = array('skuErr' => '', 'nameErr' => '', 'priceErr' => '', 'typeErr' => '', 'sizeErr' => '');
+        $errors = array('skuErr' => '', 'nameErr' => '', 'priceErr' => '', 'typeErr' => '', 'sizeErr' => '', 'weightErr' => '', 'heightErr' => '', 'widthErr' => '', 'lengthErr' => '');
         $this->validateFirstPart($values, $errors);
         $this->validateAttr($values, $errors, 'size');
         if (!$this->hasErrors($errors))
@@ -41,7 +50,7 @@ class AddController extends Controller
     public function validateBook()
     {
         $values = array('sku' => null, 'name' => null, 'price' => null, 'type' => null, 'weight' => null);
-        $errors = array('skuErr' => '', 'nameErr' => '', 'priceErr' => '', 'typeErr' => '', 'weightErr' => '');
+        $errors = array('skuErr' => '', 'nameErr' => '', 'priceErr' => '', 'typeErr' => '', 'weightErr' => '', 'sizeErr' => '', 'heightErr' => '', 'widthErr' => '', 'lengthErr' => '');
         $this->validateFirstPart($values, $errors);
         $this->validateAttr($values, $errors, 'weight');
         if (!$this->hasErrors($errors))
@@ -57,7 +66,7 @@ class AddController extends Controller
     public function validateFurniture()
     {
         $values = array('sku' => null, 'name' => null, 'price' => null, 'type' => null, 'height' => null, 'width' => null, 'length' => null);
-        $errors = array('skuErr' => '', 'nameErr' => '', 'priceErr' => '', 'typeErr' => '', 'heightErr' => '', 'widthErr' => '', 'lengthErr' => '');
+        $errors = array('skuErr' => '', 'nameErr' => '', 'priceErr' => '', 'typeErr' => '', 'heightErr' => '', 'widthErr' => '', 'lengthErr' => '', 'sizeErr' => '', 'weightErr' => '');
         $this->validateFirstPart($values, $errors);
         $this->validateAttr($values, $errors, 'length');
         $this->validateAttr($values, $errors, 'width');

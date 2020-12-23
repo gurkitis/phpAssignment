@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('#create').submit(function(){
+    $('#save').click(function(){
         var sku = $('#sku').val();
         var name = $('#name').val();
         var price = $('#price').val();
@@ -18,13 +18,14 @@ $(document).ready(function(){
             {
                 if (data.errors == null)
                 {
-                    alert('no error');
-                    this.submit();
+                    $('#create').submit();
                 }
                 else
                 {
-                    alert('error');
-                    this.preventDefault();
+                    for (var error in data.errors)
+                    {
+                        $('#'+error).html(data.errors[error]);
+                    }
                 }
             }
         });

@@ -4,17 +4,21 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
         <script src="\js\tpyeChanged.js"></script>
         <script src="\js\validation.js"></script>
+        <link rel="stylesheet" href="/css/main.css"/>
         <title>Product Add</title>
     </head>
     <body>
         <form action="/AddController/saveDVD" method="post" id="create">
             <header>
                 <h1>Product Add</h1>
-                <button type="button" id="save">Save</button>
-                <button type="button">
-                    <a href="/">Cancel</a>
-                </button>
+                <div class="buttons">
+                    <button type="button" id="save">Save</button>
+                    <button type="button">
+                        <a href="/">Cancel</a>
+                    </button>
+                </div>
             </header>
+            <hr>
             <label for="sku">SKU</label>
             <input name="sku" id="sku">
             <label for="sku" id="skuErr" class="error"></label>

@@ -8,17 +8,23 @@ class Item extends Database
         $dvds = $this->connect()->query("SELECT * FROM items WHERE Product_type = 'DVD'");
         while($row = $dvds->fetch())
         {
-            array_push($result, [$row['SKU'],$row['SKU'].'<br>'.$row['Product_Name'].'<br>'.$row['Price'].' $<br>Size: '.$row['Type_attribute']]);
+            array_push($result, [$row['SKU'],
+            $row['SKU'].'<br>'.$row['Product_Name'].'<br>'.$row['Price'].' $<br>
+            Size: '.$row['Type_attribute']]);
         }
         $books = $this->connect()->query("SELECT * FROM items WHERE Product_type = 'Book'");
         while($row = $books->fetch())
         {
-            array_push($result, [$row['SKU'],$row['SKU'].'<br>'.$row['Product_Name'].'<br>'.$row['Price'].' $<br>Weight: '.$row['Type_attribute']]);
+            array_push($result, [$row['SKU'],
+            $row['SKU'].'<br>'.$row['Product_Name'].'<br>'.$row['Price'].' $<br>
+            Weight: '.$row['Type_attribute']]);
         }
         $furnitures = $this->connect()->query("SELECT * FROM items WHERE Product_type = 'Furniture'");
         while($row = $furnitures->fetch())
         {
-            array_push($result, [$row['SKU'],$row['SKU'].'<br>'.$row['Product_Name'].'<br>'.$row['Price'].' $<br>Dimension: '.$row['Type_attribute']]);
+            array_push($result, [$row['SKU'],
+            $row['SKU'].'<br>'.$row['Product_Name'].'<br>'.$row['Price'].' $<br>
+            Dimension: '.$row['Type_attribute']]);
         }
         return $result;
     }       

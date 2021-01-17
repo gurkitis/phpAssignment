@@ -1,4 +1,6 @@
 <?php
+namespace App\Controllers;
+use App\Core\Controller;
 
 class ListController extends Controller
 {

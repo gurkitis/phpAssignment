@@ -1,4 +1,4 @@
-create table Items(
+create table items(
 	SKU varchar(255) UNIQUE,
 	Product_Name varchar(255),
 	Price decimal(10, 2),

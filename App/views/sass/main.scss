@@ -1,0 +1,52 @@
+body{
+    margin: 5%;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    h1 {
+        margin: unset;
+    }
+    .buttons {
+        margin-left: auto;
+    }
+}
+
+.catalog {
+    display: grid;
+    grid-template-columns: calc(85%/4) calc(85%/4) calc(85%/4) calc(85%/4);
+    gap: 5% 5%;
+    .itemBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border-width: 3px;
+        border-style: solid;
+        padding: 3%;
+        input {
+            margin-right: auto;
+        }
+    }
+}
+
+.error {
+    color: red;
+    font-weight: 700;
+}
+
+input, select{
+    margin-bottom: 1%;
+}
+
+input, label, select{
+    display: inline-block;
+    vertical-align: baseline;
+    width: 10%;
+}

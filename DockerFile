@@ -1,0 +1,2 @@
+FROM jelastic/lemp
+RUN apt update

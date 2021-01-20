@@ -13,7 +13,9 @@ services:
       - mysql
 
   php:
-    build: ./DockerFile
+    build:
+      context: .
+      dockerfile: DockerFile
     volumes:
       - ./:/var/www
 

@@ -25,11 +25,5 @@ services:
       - MYSQL_ROOT_PASSWORD=EE-85*q@
     command: 
       - --default-authentication-plugin=mysql_native_password
-
-  phpmyadmin:
-    image: phpmyadmin:latest
     ports:
-      - 3306:80
-    environment:
-      - PMA_HOST=mysql
-      - PMA_PORT=3306
+      - 3306:3306

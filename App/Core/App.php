@@ -36,9 +36,9 @@ class App
 
     protected function parseUrl()
     {
-        if (isset($_GET['url']))
+        if (isset($_SERVER['REQUEST_URI']))
         {
-            return $url = explode('/', filter_var(rtrim($_GET['url'], '/'), FILTER_SANITIZE_URL));
+            return $url = explode('/', filter_var(trim($_SERVER['REQUEST_URI'], '/'), FILTER_SANITIZE_URL));
         }
         else
         {

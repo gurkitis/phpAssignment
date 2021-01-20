@@ -12,5 +12,5 @@ CREATE TABLE items(
 	Type_attribute varchar(255)
 );
 
-INSERT INTO Items (SKU, Product_Name, Price, Product_type, Type_attribute) VALUES ('007', 'KAKISI', 420.69, 'DVD', '69MB');
-INSERT INTO Items (SKU, Product_Name, Price, Product_type, Type_attribute) VALUES ('666', 'Terminator', 332, 'Book', '1000KG');
+INSERT INTO items (SKU, Product_Name, Price, Product_type, Type_attribute) VALUES ('007', 'KAKISI', 420.69, 'DVD', '69MB');
+INSERT INTO items (SKU, Product_Name, Price, Product_type, Type_attribute) VALUES ('666', 'Terminator', 332, 'Book', '1000KG');

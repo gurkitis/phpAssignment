@@ -5,10 +5,10 @@ class Database
 {
     protected function connect()
     {
-        $host = 'localhost';
+        $host = 'mysql:3306';
         $dbName = 'php_assignmentdb';
         $username = 'root';
-        $password = '';
+        $password = 'EE-85*q@';
 
         try 
         {
